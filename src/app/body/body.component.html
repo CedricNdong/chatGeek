@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <br>
+            <div class="card">
+                <h4 class="card-header text-center text-primary">Chatting With ChatGeek</h4>
+                <div class="card-body mb-3">     
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <div class="frame-box">
+                                    <div *ngFor="let item of chatConversation">
+                                        <p class="card-text padding" >{{item.message}}</p>
+                                    </div>
+                                    <div *ngIf="showLoading"><img src="../../assets/images/loading.gif" width="50px" height="50px"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-1"> </div>       
+                        </div>
+                        <div class="row mt-4">
+                        
+
+                           
+                            <div class="col-md-2"></div>
+                            <div class="col-7">
+                                <textarea  class="form-control" placeholder="Message ..." [(ngModel)]="promptText"></textarea>
+                            </div>
+                           
+                                <button class=" col-1 btn btn-outline-primary" (click)="submitMessage()"><i class="bi bi-send-check-fill "></i> </button>
+                           
+                            <div class="col-md-2"></div>
+                        </div>                 
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>
