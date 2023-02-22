@@ -1,16 +1,7 @@
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
-.person {
-    font-style: italic;
-    font-weight: bold;
-    color: purple;
-}
 
-.bot {    
-    font-weight: bold; 
-    color: darkgreen;
-}
 
 .frame-box{
     border: dotted 2px orange; padding: 20px;
