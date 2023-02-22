@@ -11,7 +11,12 @@
                             <div class="col-md-10">
                                 <div class="frame-box">
                                     <div *ngFor="let item of chatConversation">
-                                        <p class="card-text padding" >{{item.message}}</p>
+                                        <div *ngIf="item.messageFrom === 2"class="chat-message">
+                                            <span class="chat-bubble bg-primary text-white text-right mb-1">{{item.message}}</span>
+                                        </div>
+                                        <div *ngIf="item.messageFrom === 1" class="chat-message">
+                                            <span class="chat-bubble bg-secondary text-white text-left mb-1 me-5">{{item.message}}</span>
+                                        </div>
                                     </div>
                                     <div *ngIf="showLoading"><img src="../../assets/images/loading.gif" width="50px" height="50px"></div>
                                 </div>
